@@ -1,3 +1,4 @@
+/*
 import { Router } from "express";
 
 import path from "node:path";
@@ -35,11 +36,13 @@ const defaultPizzas: Pizza[] = [
     content: "Tomates, Mozarella, Chorizo piquant, Jalapenos",
   },
 ];
+*/
 
 /* Read all the pizzas from the menu
    GET /pizzas?order=title : ascending order by title
    GET /pizzas?order=-title : descending order by title
 */
+/*
 router.get("/", (req, res) => {
   if (req.query.order && typeof req.query.order !== "string") {
     return res.sendStatus(400);
@@ -159,3 +162,4 @@ router.patch("/:id", (req, res) => {
 });
 
 export default router;
+*/

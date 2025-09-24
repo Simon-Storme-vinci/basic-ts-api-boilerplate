@@ -4,7 +4,7 @@ import path from "node:path";
 import { Film } from "../types";
 import { serialize, parse } from "../utils/json";
 
-const router = Router();
+export const router = Router();
 
 const jsonDbPath = path.join(__dirname, "/../data/films.json");
 
@@ -33,3 +33,20 @@ const defaultFilms: Film[] = [
 ];
 
 
+
+/*
+    Read all the films from the men
+*/
+
+router.get("/", (req, res) => {
+    if (req.query.order && typeof req.query.order !== "string") {
+        return res.sendStatus(400);
+    }
+    
+    const listesFilms : Film[] = [];
+    const films = parse(jsonDbPath, defaultFilms);
+
+    return res.json(listesFilms.length === 0 ? films : listesFilms);
+});
+
+export default router;
