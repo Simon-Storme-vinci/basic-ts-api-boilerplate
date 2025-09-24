@@ -9,6 +9,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.use("/users", usersRouter);
-app.use("/pizzas", pizzaRouter);
+app.use("/films", pizzaRouter);
 
 export default app;
