@@ -2,7 +2,7 @@ import { Router } from "express";
 
 import path from "node:path";
 import { Film } from "../types";
-import { serialize, parse } from "../utils/json";
+import { parse } from "../utils/json";
 
 export const router = Router();
 
